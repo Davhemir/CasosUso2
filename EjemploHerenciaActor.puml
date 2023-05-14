@@ -1,0 +1,8 @@
+@startuml
+:Cliente bancario: as cb
+:Cliente corporativo: as cc
+:Cliente normal: as cn
+
+cc --|> cb
+cn --|> cb
+@enduml

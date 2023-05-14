@@ -1,0 +1,39 @@
+@startuml
+:Empleado: as e
+:Administrador: as a
+
+rectangle "Empresa Pedidos"{
+(Alta Cliente) as ac
+(Introducir pedido) as ip
+(Obtener estado Pedido) as op
+(Cancelar pedido) as cp
+(Buscar cliente) as bc
+(Pago en cuenta) as pc
+(Pago con tarjeta) as pt
+(Buscar pedido) as bp
+(Borrar pedido) as bop
+(Nuevo producto) as np
+(Borrar producto) as borp
+}
+
+e --> ip
+e --> cp
+e --> op
+e --> bp
+e --> bop
+e --> ac
+e --> bc
+
+a --> np
+a --> borp
+
+ac .> ip : <<extend>>
+ip .> pt : <<extend>>
+ip .> pc : <<extend>>
+
+ip .> bc : <<include>>
+op .> bp : <<include>>
+cp .> bp : <<include>>
+
+
+@enduml

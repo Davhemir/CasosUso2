@@ -1,0 +1,10 @@
+@startuml
+
+:Bibliotecario: as b
+
+(Baja socio) as bs
+(Buscar socio) as bus
+
+b->bs
+bs .> bus: <<include>>
+@enduml

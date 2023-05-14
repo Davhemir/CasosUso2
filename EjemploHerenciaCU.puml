@@ -1,0 +1,12 @@
+@startuml
+:Agente: as a
+(Enviar solicitud crédito) as es
+(Enviar solicitud de crédito personal) as esp
+(Enviar solicitud de crédito empresarial) as ese
+
+a -> es
+esp --|> es
+ese --|> es
+
+
+@enduml
